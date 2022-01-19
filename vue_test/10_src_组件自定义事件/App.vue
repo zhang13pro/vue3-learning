@@ -5,10 +5,10 @@
     <!-- 通过父组件给子组件传递函数类型的props实现：子给父传递数据 -->
     <School :getSchoolName="getSchoolName" />
 
-    <!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第一种写法，使用@或v-on） -->
+    <!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第一种写法，使用@或v-on） 子组件$emit触发自定义事件 -->
     <Student @atguigu="getStudentName" @demo="m1" />
 
-    <!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第二种写法，使用ref） -->
+    <!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第二种写法，使用ref） 配合$on绑定 $off解绑-->
     <Student ref="student" @click.native="show" />
   </div>
 </template>
